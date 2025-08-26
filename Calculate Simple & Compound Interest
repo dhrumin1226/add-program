@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <math.h>   // for pow() function
+
+int main() {
+    float P, R, T, SI, CI;
+
+    // Input
+    printf("Enter Principal Amount: ");
+    scanf("%f", &P);
+
+    printf("Enter Rate of Interest: ");
+    scanf("%f", &R);
+
+    printf("Enter Time (in years): ");
+    scanf("%f", &T);
+
+    // Simple Interest
+    SI = (P * R * T) / 100;
+
+    // Compound Interest
+    CI = P * pow((1 + R / 100), T) - P;
+
+    // Output
+    printf("\nSimple Interest = %.2f", SI);
+    printf("\nCompound Interest = %.2f\n", CI);
+
+    return 0;
+}
