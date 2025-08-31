@@ -1,0 +1,15 @@
+#include <stdio.h>
+int main() {
+    int boys = 0, girls = 0;
+    char gender;
+    printf("Enter gender of 50 students (M/F):\n");
+    for (int i = 1; i <= 50; i++) {
+        scanf(" %c", &gender);
+        if (gender == 'M' || gender == 'm')
+            boys++;
+        else if (gender == 'F' || gender == 'f')
+            girls++;
+    }
+    printf("Boys = %d, Girls = %d\n", boys, girls);
+    return 0;
+}
